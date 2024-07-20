@@ -30,6 +30,7 @@ const endpointEvents = endpoint.events;
 endpointEvents.beforeSending(config => {
   const headers: any = config.headers;
   headers["os"] = apiOS;
+  headers["client-id"]= 127295491
 });
 
 endpointEvents.onSuccess((response: AxiosResponse) => {
