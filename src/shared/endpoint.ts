@@ -27,9 +27,11 @@ const endpoint = new Endpoint({
 
 const endpointEvents = endpoint.events;
 
+// comment
 endpointEvents.beforeSending(config => {
   const headers: any = config.headers;
   headers["os"] = apiOS;
+  console.log("hello")
 });
 
 endpointEvents.onSuccess((response: AxiosResponse) => {
