@@ -7,6 +7,7 @@ export default function HomePage() {
     <>
       <Helmet title={trans("home")} appendAppName={false} />
       <Button className="bg-primary-default hover:bg-primary-dark font-custom">Home</Button>
+      Test PR
     </>
   );
 }
