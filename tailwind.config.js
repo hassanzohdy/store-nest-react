@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
   prefix: "",
   theme: {
     container: {
@@ -11,19 +17,6 @@ module.exports = {
       },
     },
     extend: {
-      colors: {
-        primary: {
-          default: "#3BB77E",
-          light: "#DEF9EC",
-          dark: "#29A56C",
-        },
-        font: {
-          default: "#253D4E",
-        },
-      },
-      fontFamily: {
-        custom: ["Quicksand", "sans-serif"],
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -38,7 +31,16 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      screens: {
+        'small-to-medium': { 'min': '486px', 'max': '767px' },
+      },
+      colors: {
+        "mainColor": "#253D4E",
+        "rateColor": "#B6B6B6",
+        "priceNowColor": "#3BB77E",
+        "priceOldColor": "#adadad",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+}
