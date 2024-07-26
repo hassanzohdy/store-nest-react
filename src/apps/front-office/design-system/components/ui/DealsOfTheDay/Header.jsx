@@ -1,4 +1,4 @@
-import { FaAngleRight } from 'react-icons/fa';
+import { FaAngleRight } from "react-icons/fa";
 
 const Header = ({ title, linkText, linkHref }) => {
   return (
@@ -8,8 +8,7 @@ const Header = ({ title, linkText, linkHref }) => {
       </h3>
       <a
         className="flex items-center justify-center text-base text-gray-500 transition duration-300 hover:text-teal-500"
-        href={linkHref}
-      >
+        href={linkHref}>
         {linkText}
         <FaAngleRight className="ml-2 w-5" />
       </a>

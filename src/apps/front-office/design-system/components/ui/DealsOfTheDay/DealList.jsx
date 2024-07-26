@@ -1,4 +1,4 @@
-import DealCard from './DealCard';
+import DealCard from "./DealCard";
 
 const DealList = ({ deals }) => {
   return (
