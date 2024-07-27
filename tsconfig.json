@@ -21,7 +21,7 @@
       "shared/*": ["./src/shared/*"],
       "design-system": ["src/apps/front-office/design-system"],
       "design-system/*": ["src/apps/front-office/design-system/*"],
-      "assets/*": ["./src/shared/assets/*"],
+      "assets/*": ["./src/shared/assets/*"], 
       "user": ["src/apps/front-office/account/user"],
       "app/*": ["src/apps/front-office/*"]
     },

@@ -1,11 +1,7 @@
-import { fullRate, halfRate } from "./topSelling";
-import PropTypes from 'prop-types';
-const ProductBox = ({
-  image,
-  text,
-  priceNow,
-  priceDelete,
-}) => {
+import { productType } from "./types";
+import { FaStar } from "react-icons/fa6";
+import { FaStarHalfAlt } from "react-icons/fa";
+const ProductCard = ({ productImage, productDescription, priceNow, priceOld }: productType) => {
   return (
     <div
       className="group  flex items-center gap-5 mb-7 cursor-pointer relative 
@@ -14,30 +10,30 @@ const ProductBox = ({
       <div>
         <img
           className="rounded-xl w-32	small-to-medium:w-11/12	"
-          src={image}
+          src={productImage}
           alt="not Found"
         />
       </div>
       <div>
         <h6 className="font-medium text-mainColor leading-5 group-hover:text-priceNowColor duration-500">
-          {text}
+          {productDescription}
         </h6>
         <div className="hidden xl:flex gap-1">
           <ul className="flex items-center">
             <li>
-              <img src={fullRate} alt="not Found" />
+              <FaStar className="text-starColor" />
             </li>
             <li>
-              <img src={fullRate} alt="not Found" />
+              <FaStar className="text-starColor" />
             </li>
             <li>
-              <img src={fullRate} alt="not Found" />
+              <FaStar className="text-starColor" />
             </li>
             <li>
-              <img src={fullRate} alt="not Found" />
+              <FaStar className="text-starColor" />
             </li>
             <li>
-              <img src={halfRate} alt="not Found" />
+              <FaStarHalfAlt className="text-starColor" />
             </li>
           </ul>
           <span className="text-rateColor">(4.0)</span>
@@ -45,17 +41,12 @@ const ProductBox = ({
         <div className="flex gap-2 mt-1">
           <h3 className="text-lg font-medium text-priceNowColor">{priceNow}</h3>
           <h5 className="text-sm font-medium mt-1 line-through text-priceOldColor">
-            {priceDelete}
+            {priceOld}
           </h5>
         </div>
       </div>
     </div>
   );
 };
-ProductBox.propTypes = {
-  image: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  priceNow: PropTypes.string.isRequired,
-  priceDelete: PropTypes.string.isRequired,
-};
-export default ProductBox;
+
+export default ProductCard;
