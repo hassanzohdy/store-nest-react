@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   prefix: "",
   theme: {
     container: {
@@ -13,18 +11,18 @@ module.exports = {
       },
     },
     extend: {
-      colors : {
-        primary:  {
+      colors: {
+        primary: {
           default: "#3BB77E",
           light: "#DEF9EC",
-          dark: "#29A56C"
+          dark: "#29A56C",
         },
         font: {
           default: "#253D4E",
-        }
+        },
       },
       fontFamily: {
-        'custom': ['Quicksand', 'sans-serif'],
+        custom: ["Quicksand", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
@@ -41,6 +39,17 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    extend: {
+      backgroundImage: {
+        herobg: "url('../../public/assets/banner-10.png')",
+      },
+    },
+    extend: {
+      fontFamily: {
+        roboto: ["Quicksand", "sans-serif"],
+      },
+    },
   },
+
   plugins: [require("tailwindcss-animate")],
-}
+};
