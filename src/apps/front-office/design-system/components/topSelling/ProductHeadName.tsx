@@ -1,4 +1,4 @@
-import { productType } from "./types"
+import { productType } from "./types";
 
 const ProductHeadName = ({ productTitle }: productType) => {
   return (
