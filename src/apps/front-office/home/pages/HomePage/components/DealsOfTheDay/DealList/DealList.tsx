@@ -1,5 +1,4 @@
-import DealCard from "./DealCard";
-
+import DealCard from "../DealCard";
 const DealList = ({ deals }) => {
   return (
     <div className="flex flex-wrap -m-2 gap-4">

@@ -1,6 +1,5 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
-
 const DealCard = ({
   imageSrc,
   title,
@@ -61,12 +60,12 @@ const DealCard = ({
                 </span>
               </div>
               <div>
-                <a
+                <link
                   className="flex items-center py-1.5 px-5 rounded-md bg-teal-200 font-bold text-base text-teal-500 duration-300 hover:text-white hover:bg-green-600"
                   href="#">
                   <FaShoppingCart className="mr-1" />
                   Add
-                </a>
+                </link>
               </div>
             </div>
           </div>
