@@ -1,3 +1,4 @@
+import { Link } from "@mongez/react-router";
 import { FaShoppingCart } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
 const DealCard = ({
@@ -14,9 +15,9 @@ const DealCard = ({
       <div className="border-0 pb-12 relative bg-white rounded-2xl overflow-hidden transition duration-200 ">
         <div className="relative z-0">
           <div className="relative overflow-hidden rounded-3xl">
-            <a className="block" href="#">
+            <Link className="block" href="#">
               <img src={imageSrc} alt={title} className="w-full h-auto" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="relative mt-[-70px] z-[3] p-4 mx-auto transition-all duration-500 hover:mt-[-80px]">
@@ -34,7 +35,7 @@ const DealCard = ({
           </div>
           <div className="bg-white rounded-xl shadow-md pt-6 pb-6 px-5">
             <h2 className="font-quicksand text-sm font-bold mb-1 transition duration-300 hover:text-teal-500">
-              <a href="#">{title}</a>
+              <Link href="#">{title}</Link>
             </h2>
             <div className="mt-2">
               <div className="flex items-center space-x-0">
@@ -46,11 +47,11 @@ const DealCard = ({
             </div>
             <div className="text-base font-normal leading-6 font-lato mt-1">
               <span className="text-gray-500 pr-1 mt-1">BY</span>
-              <a
+              <Link
                 className="text-teal-500 transition duration-300 hover:text-orange-400"
                 href="#">
                 {by}
-              </a>
+              </Link>
             </div>
             <div className="flex justify-between mt-4 font-bold">
               <div className="pt-1">
@@ -60,12 +61,12 @@ const DealCard = ({
                 </span>
               </div>
               <div>
-                <link
+                <Link
                   className="flex items-center py-1.5 px-5 rounded-md bg-teal-200 font-bold text-base text-teal-500 duration-300 hover:text-white hover:bg-green-600"
                   href="#">
                   <FaShoppingCart className="mr-1" />
                   Add
-                </link>
+                </Link>
               </div>
             </div>
           </div>
