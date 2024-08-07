@@ -1,3 +1,4 @@
+// I created a new file "type.ts" because I made a change in Types
 export type LocaleValue = {
   localeCode: string;
   value: string;
@@ -17,6 +18,7 @@ export type Module = {
   title: LocaleValue[];
   shortDescription: LocaleValue[];
   categories: Category[];
+  products: Product[];
 };
 
 export type Column = {
@@ -81,7 +83,7 @@ export type Product = {
     minQuantity: number;
   };
   salePrice: number;
-  shortDescription: LocaleValue[];
+  shortDescription: string;
   slug: string;
   sortOrder: number;
   type: string;

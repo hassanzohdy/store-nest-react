@@ -19,7 +19,7 @@ export default function TopSellingCard({
         />
       </div>
       <div>
-        <h6 className="font-medium text-mainColor leading-5 group-hover:text-priceNowColor duration-500">
+        <h6 className="font-[700] text-sm text-mainColor leading-5 group-hover:text-priceNowColor duration-500">
           {productDescription}
         </h6>
         <div className="hidden xl:flex gap-1">
