@@ -1,4 +1,3 @@
-import { Star, StarHalf } from "lucide-react";
 import { topSellingType } from "./index";
 export default function TopSellingCard({
   productImageTop,
@@ -25,19 +24,19 @@ export default function TopSellingCard({
         <div className="hidden xl:flex gap-1">
           <ul className="flex items-center">
             <li>
-              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
+              <i className='bx bxs-star text-rateStar'></i>
             </li>
             <li>
-              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
+              <i className='bx bxs-star text-rateStar'></i>
             </li>
             <li>
-              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
+              <i className='bx bxs-star text-rateStar'></i>
             </li>
             <li>
-              <Star className="w-4" fill="#fcc43c" stroke="transparent" />
+              <i className='bx bxs-star text-rateStar'></i>
             </li>
             <li>
-              <StarHalf className="w-4" fill="#fcc43c" stroke="transparent" />
+              <i className='bx bxs-star-half text-rateStar'></i>
             </li>
           </ul>
           <span className="text-rateColor">(4.0)</span>

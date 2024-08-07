@@ -26,6 +26,7 @@ export default {
         rateColor: "#B6B6B6",
         priceNowColor: "#3BB77E",
         priceOldColor: "#adadad",
+        rateStar: "#fcc43c",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
