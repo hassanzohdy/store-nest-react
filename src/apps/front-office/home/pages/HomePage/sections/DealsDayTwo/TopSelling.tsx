@@ -4,9 +4,10 @@ import TopSellingHead from "apps/front-office/design-system/components/TopSellin
 import { useEffect, useState } from "react";
 import { getTopsellingHttpsList } from "./topselling-http-service";
 import { LocaleValue, Product } from "./types";
+
 export default function TopSelling({ moduleName }) {
-  const [productData, setProductData] = useState<Product | any>([]);
-  const [productTitle, setProductTitle] = useState<LocaleValue | any>({});
+  const [productData, setProductData] = useState<Product[]>([]);
+  const [productTitle, setProductTitle] = useState<LocaleValue>({});
   const currentLang = getCurrentLocaleCode();
 
   useEffect(() => {
@@ -28,11 +29,12 @@ export default function TopSelling({ moduleName }) {
           }
         }
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching ", error);
       }
     };
     fetchData();
   }, [moduleName, currentLang]);
+
   return (
     <div>
       <div>

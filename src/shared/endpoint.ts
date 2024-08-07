@@ -31,7 +31,7 @@ endpointEvents.beforeSending(config => {
   const headers: any = config.headers;
   headers["client-id"] = apiClient;
   headers["os"] = apiOS;
-  headers["Authorization"] = `Bearer ${apiAuthToken}`;
+  headers["Authorization"] = `Bearer ${apiKey}`;
 });
 
 endpointEvents.onSuccess((response: AxiosResponse) => {
