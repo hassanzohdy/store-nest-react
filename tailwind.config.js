@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1610px",
       },
@@ -40,6 +40,9 @@ module.exports = {
       },
       translate: {
         '-5px': '-5px',
+      },
+      boxShadow: {
+        'lg': '0 10px 6px rgb(0 0 0 / 5%)',
       },
       keyframes: {
         "accordion-down": {

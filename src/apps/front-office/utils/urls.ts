@@ -1,9 +1,17 @@
 // append urls here, DO NOT remove this line
 
+import { Category, Product } from "./types";
+
 const URLS = {
-  shop: "/shop",
   home: "/",
   notFound: "/404",
+  shop: {
+    list: "/products",
+    viewCategoryRoute: "/category/:id",
+    viewCategory: (category: Category) => `/category/${category.id}`,
+    viewProductRoute: "products/:id",
+    viewProduct: (product: Product) => `/produucts/${product.id}`,
+  },
   blog: {
     root: "/blog",
     viewRoute: "/blog/:id/:slug",

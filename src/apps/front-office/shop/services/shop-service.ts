@@ -1,3 +1,4 @@
+import { Product } from "apps/front-office/utils/types";
 import endpoint from "shared/endpoint";
 
 /**
@@ -10,8 +11,15 @@ export function getShopsList(params: any = {}) {
 }
 
 /**
- * Get shop details
+ * Get Product details
  */
-export function getShop(id: string | number) {
-  return endpoint.get("/shop/" + id);
+type ProductData = {
+  product: Product;
+};
+export async function getProduct(id: string | number): Promise<ProductData> {
+  const response = await endpoint.get("/products/" + id);
+
+  return {
+    product: response?.data?.product,
+  };
 }

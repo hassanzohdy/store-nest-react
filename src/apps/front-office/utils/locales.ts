@@ -15,8 +15,8 @@ export function the(key: string) {
 // Add only common localization
 groupedTranslations({
   home: {
-    en: "Home Page",
-    ar: "الصفحة الرئيسية",
+    en: "Home",
+    ar: "الرئيسية",
   },
   contactUs: {
     en: "Contact Us",
@@ -29,6 +29,14 @@ groupedTranslations({
   allProducts: {
     en: "all products",
     ar: "جميع المنتجات ",
+  },
+  description: {
+    en: "description",
+    ar: "الوصف",
+  },
+  additionalInfo: {
+    en: "additional info",
+    ar: "معلومات اضافية",
   },
   ...productsTranslation,
   ...sectionsTranslation,

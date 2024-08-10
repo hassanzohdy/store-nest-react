@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.tab-content h2,
+.tab-content h3,
+.tab-content h4,
+.tab-content h5,
+.tab-content h6 {
+  @apply my-4 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-gray-700 capitalize;
+}

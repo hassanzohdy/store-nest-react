@@ -38,6 +38,9 @@ export default {
           foreground: "hsl(var(--muted-foreground))",
         },
       },
+      boxShadow: {
+        'lg': '0 35px 60px -15px rgba(0, 0, 0, 0.8)',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

@@ -1,7 +1,8 @@
-import { getCurrentLocaleCode, trans } from "@mongez/localization";
+import { trans } from "@mongez/localization";
 import { Link } from "@mongez/react-router";
 import Stars from "apps/front-office/design-system/components/Stars";
 import { Button } from "apps/front-office/design-system/components/ui/button";
+import { getLocalizedValue } from "apps/front-office/utils/localization";
 import { Product } from "apps/front-office/utils/types";
 import { ShoppingCart } from "lucide-react";
 import PreviewProducts from "../PreviewProducts";
@@ -12,16 +13,6 @@ export type ProductCardProps = {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const isOnSale = product.salePrice ? true : false;
-  const currentLang = getCurrentLocaleCode();
-
-  const getLocalizedValue = (
-    localizedValues: { localeCode: string; value: string }[],
-  ) => {
-    const localizedValue = localizedValues.find(
-      item => item.localeCode === currentLang,
-    );
-    return localizedValue ? localizedValue.value : localizedValues[0].value;
-  };
 
   return (
     <>
