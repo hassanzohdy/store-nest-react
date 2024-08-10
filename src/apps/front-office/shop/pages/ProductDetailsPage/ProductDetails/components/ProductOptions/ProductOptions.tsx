@@ -5,6 +5,6 @@ export type ProductOptionsProps = {
     values: string[];
   }[];
 };
-export function ProductOptions() {
+export default function ProductOptions() {
   return <div className="product-options mb-4">options</div>;
 }
