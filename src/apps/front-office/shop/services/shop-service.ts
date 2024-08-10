@@ -4,9 +4,9 @@ import endpoint from "shared/endpoint";
 import { apiKey, appClientId } from "shared/flags";
 
 /* @route GET /products?wf=true
-* @description Get Shop Data (all in one request)
-* @access Private
-*/
+ * @description Get Shop Data (all in one request)
+ * @access Private
+ */
 export function getShopPageData() {
   return endpoint.get("/products?wf=true", {
     headers: {
@@ -15,8 +15,8 @@ export function getShopPageData() {
       "client-id": appClientId,
     },
   });
-  }
-  
+}
+
 /**
  * Get Product details
  */
@@ -27,5 +27,5 @@ export async function getProduct(id: string | number): Promise<ProductData> {
   const response = await endpoint.get("/products/" + id);
   return {
     product: response?.data?.product,
-  }
+  };
 }
