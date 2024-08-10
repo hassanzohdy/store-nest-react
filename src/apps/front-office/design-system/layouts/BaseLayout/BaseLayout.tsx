@@ -1,3 +1,5 @@
+import Portal from "../../components/Portal";
+import QuickView from "../../components/QuickView";
 import Footer from "../Footer";
 import Header from "../Header";
 

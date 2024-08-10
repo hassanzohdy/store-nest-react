@@ -4,6 +4,14 @@ import { Category, Product } from "./types";
 
 const URLS = {
   home: "/",
+  compare: "/compare",
+  cart: "/cart",
+  checkout: "/checkout",
+  account: "/account",
+  wishlist: "/wishlist",
+  addresses: "/addresses",
+  orders: "/orders",
+  venders: "/venders",
   notFound: "/404",
   shop: {
     list: "/products",

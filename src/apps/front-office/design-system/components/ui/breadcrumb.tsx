@@ -3,7 +3,6 @@ import { Slot } from "@radix-ui/react-slot";
 import * as React from "react";
 
 import { cn } from "apps/front-office/design-system/utils/utils";
-import { cva } from "class-variance-authority";
 const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
