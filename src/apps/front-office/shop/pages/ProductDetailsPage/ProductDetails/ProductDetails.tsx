@@ -2,7 +2,7 @@ import { trans } from "@mongez/localization";
 import { getLocalizedValue } from "apps/front-office/utils/localization";
 import { Product } from "apps/front-office/utils/types";
 import ProductActionsBtns from "./components/ProductActionsBtns";
-import { ProductOptions } from "./components/ProductOptions/ProductOptions";
+import ProductOptions  from "./components/ProductOptions/ProductOptions";
 import ProductQuantity from "./components/ProductQuantity";
 
 export type ProductDetailsProps = {
