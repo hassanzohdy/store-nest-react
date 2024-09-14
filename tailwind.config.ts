@@ -23,7 +23,7 @@ export default {
         lg: "1024px",
         xl: "1280px",
         "2xl": "1610px",
-        // "small-to-medium": { min: "486px", max: "767px" },
+        "small-to-medium": { min: "486px", max: "767px" },//I need to adjust the style to a specific size.
       },
       colors: {
         mainColor: "#253D4E",

@@ -4,9 +4,9 @@ import endpoint from "shared/endpoint";
  * Get Guest token
  */
 export function getGuestToken() {
-  return endpoint.post("/login/guests");
+  return endpoint.post("/login/guests"); 
 }
-
+ 
 /**
  * Perform login
  */
@@ -18,7 +18,7 @@ export function login(data: any) {
  * Create new account
  */
 export function register(data: any) {
-  return endpoint.post("/register", data);
+  return endpoint.post("/register", data); 
 }
 
 /**

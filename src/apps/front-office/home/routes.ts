@@ -11,5 +11,6 @@ publicRoutes([
   {
     path: URLS.home,
     component: HomePage,
-  },
+  }, 
 ]);
+ 

@@ -1,5 +1,7 @@
 import { reverseGuardedRoutes } from "../utils/router";
+import RegisterPage from "./pages/register-page/RegisterPage";
 
 reverseGuardedRoutes([
-  // login routes
+  { path: '/account/register', component: RegisterPage }//if user already loggedIn return back home page
 ]);
+ 
