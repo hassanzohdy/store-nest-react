@@ -15,7 +15,7 @@ groupedTranslations({
   },
   min: {
     en: "Value can not be lower than 8",
-    ar: "8 القيمة يجب أن لا تقل عن" ,
+    ar: "8 القيمة يجب أن لا تقل عن",
   },
   max: {
     en: "Value can not be greater than 16",

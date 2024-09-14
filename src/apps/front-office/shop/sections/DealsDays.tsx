@@ -7,10 +7,10 @@ import { Button } from "../../design-system/components/ui/button";
 import { getLocalizedValue } from "../../utils/localization";
 import { shopDataAtom } from "../atoms/shop-data.atom";
 
-export type DealsDaysProps = {
-  // props go here
-};
-function DealsDays(props: DealsDaysProps, ref: any) {
+//  export type DealsDaysProps = {
+//    // props go here
+//  };
+function DealsDays(props: any, ref: any) {
   const mockData = shopDataAtom.use("products").slice(0, 4);
 
   return (

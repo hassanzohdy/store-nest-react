@@ -55,7 +55,7 @@ export function useCreateAccount() {
   const createAccount = ({ values, form }) => {
     register(values)
       .then(() => {
-        goBack();  
+        goBack();
       })
       .catch(() => {
         form.submitting(false);

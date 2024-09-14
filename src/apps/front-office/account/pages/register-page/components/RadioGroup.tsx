@@ -14,7 +14,7 @@ export default function RadioGroup({
   defaultValue,
   ...props
 }: RadioGroupProps) {
-  const { value, changeValue, error } = useFormControl({
+  const { value, changeValue } = useFormControl({
     ...props,
     defaultValue,
     rules: [requiredRule],
