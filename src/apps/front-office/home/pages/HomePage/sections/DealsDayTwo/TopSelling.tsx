@@ -6,7 +6,6 @@ import { getTopsellingHttpsList } from "./topselling-http-service";
 
 export default function TopSelling({ moduleName }) {
   const [productData, setProductData] = useState<Product | any>([]);
-  // const [productTitle, setProductTitle] = useState<string | any>({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,9 +15,7 @@ export default function TopSelling({ moduleName }) {
           for (const column of row.columns) {
             if (column.module.name === moduleName) {
               const data = column.module.products;
-              // const title = column.module.title;
               setProductData(data);
-              // setProductTitle(title);
               return;
             }
           }

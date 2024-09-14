@@ -8,3 +8,4 @@ publicRoutes([
     component: CatalogPage,
   },
 ]);
+ 

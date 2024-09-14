@@ -8,11 +8,11 @@ import { AxiosResponse } from "axios";
 import { apiClient, apiKey, apiOS } from "./flags";
 
 const endpoint = new Endpoint({
-  putToPost: false,
+  putToPost: false, 
   baseURL: "https://store.mentoor.io/",
   cache: false,
   cacheOptions: {
-    driver: new RunTimeDriver(),
+    driver: new RunTimeDriver(), 
     expiresAfter: 60 * 60 * 24 * 7, // 1 week, but because it is a runtime driver, it will be cleared when the page is refreshed
   },
   setAuthorizationHeader: () => {
