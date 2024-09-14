@@ -3,6 +3,7 @@ import { Separator } from "../../components/ui/separator";
 import categoriesAtom from "../atoms/categoriesAtom";
 import BottomHeader from "./BottomHeader";
 import MiddleHeader from "./MiddleHeader";
+import TopHeader from "./TopHeader";
 
 export default function Header() {
   const setCategories = categoriesAtom.setCategories;
@@ -13,8 +14,8 @@ export default function Header() {
 
   return (
     <div className="font-custom">
-      {/* <TopHeader /> */}
-      {/* <Separator /> */}
+      <TopHeader />
+      <Separator />
       <MiddleHeader />
       <Separator />
       <BottomHeader />

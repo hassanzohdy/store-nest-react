@@ -11,7 +11,6 @@ export type Category = {
   slug?: string;
   products?: Product[];
   image?: Image;
-  totalProducts?: number;
 };
 
 export type Product = {
