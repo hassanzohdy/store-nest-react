@@ -14,6 +14,7 @@ export type Column = {
 
 export type Row = {
   columns: Column[];
+  data?: any;
 };
 
 export type Module = {

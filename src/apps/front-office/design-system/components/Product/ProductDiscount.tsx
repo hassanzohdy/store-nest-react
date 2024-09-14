@@ -1,5 +1,5 @@
 import { PRODUCT_STATUS, PRODUCT_STATUS_CLASSES } from "shared/constants";
-import { Category } from "src/apps/front-office/utils/types";
+import { Category } from "src/apps/front-office/shop/utils/types";
 
 type ProductDiscountProps = {
   discount?: number;
@@ -11,6 +11,7 @@ const ProductDiscount = ({
     id: 0,
     name: "",
   },
+
   discount = 0,
 }: ProductDiscountProps) => {
   if (!discount) return null;

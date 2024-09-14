@@ -5,7 +5,7 @@ import {
   CardContent,
 } from "apps/front-office/design-system/components/ui/card";
 import URLS from "apps/front-office/utils/urls";
-import { Category } from "src/apps/front-office/utils/types";
+import { Category } from "src/apps/front-office/shop/utils/types";
 import { SwiperSlide } from "swiper/react";
 
 interface CategoryCardProps {

@@ -1,9 +1,8 @@
 import { Form } from "@mongez/react-form";
-import { Link } from "@mongez/react-router";
+import { Link, navigateBack } from "@mongez/react-router";
 import { BookOpen } from "lucide-react";
 import Footer from "src/apps/front-office/design-system/layouts/Footer/Footer";
 import Header from "src/apps/front-office/design-system/layouts/Header/Header";
-import { useCreateAccount } from "../../hooks";
 import Checkbox from "./components/Checkbox";
 import EmailInput from "./components/EmailInput";
 import HeadOfRegister from "./components/HeadOfRegister";
@@ -15,11 +14,31 @@ import TextInput from "./components/TextInput";
 import "./input.css";
 
 export default function RegisterPage() {
-  const createAccount = useCreateAccount();
   const submitForm = ({ values, form }) => {
-    createAccount({ values, form });
+    fetch("https://store.mentoor.io/register", {
+      method: "POST",
+      body: JSON.stringify(values),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        clientId: "127295491s",
+        //  Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjcwMzI3MDYyLCJfaWQiOiI2NmIxMjJmMTg1MjJkZDUyMDE1ZGFlNDkiLCJ1c2VyVHlwZSI6Imd1ZXN0IiwiY3JlYXRlZEF0IjoxNzIyODg0ODQ5NTExLCJpYXQiOjE3MjI4ODQ4NDl9.kEYoeZp3D5PmeohyEodeBwfswUOiKnROQrTJGiF5YUk`,
+      },
+    })
+      .then(() => {
+        navigateBack(); //go back page before
+      })
+      .catch(() => {
+        form.submitting(false);
+      });
+    // register(values) this show error!
+    //   .then(() => {
+    //     console.log("Success");
+    //   })
+    //   .catch(() => {
+    //     console.log("error");
+    //   });
   };
-
   return (
     <>
       <Header />
