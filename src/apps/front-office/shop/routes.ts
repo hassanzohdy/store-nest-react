@@ -17,6 +17,8 @@ publicRoutes([
   {
     path: URLS.wishlist,
     component: WishlistPage,
+  },
+  {
     path: URLS.compare,
     component: ComparePage,
   },
