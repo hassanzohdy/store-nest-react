@@ -10,9 +10,9 @@ import {
   TableHeader,
   TableRow,
 } from "src/apps/front-office/design-system/components/ui/table";
-import StyledCheckBox from "../FilterSide/StyledCheckBox";
 
 import { trans } from "@mongez/localization";
+import StyledCheckBox from "../../pages/ShopPage/components/FilterSide/StyledCheckBox";
 
 const data = [
   {
