@@ -1,4 +1,3 @@
-import { trans } from "@mongez/localization";
 import {
   FormControlProps,
   matchRule,
@@ -11,20 +10,6 @@ export default function PasswordInput(props: FormControlProps) {
     rules: [requiredRule, minLengthRule, matchRule],
     ...props,
   });
-  const getErrorMessage = () => {
-    if (!error) return null;
-
-    switch (error) {
-      case "validation.required":
-        return trans("required");
-      case "validation.minLength":
-        return trans("min");
-      case "validation.match":
-        return trans("matchPassword");
-      default:
-        return trans("required");
-    }
-  };
   return (
     <>
       <input
@@ -36,11 +21,7 @@ export default function PasswordInput(props: FormControlProps) {
         }}
         {...otherProps}
       />
-      {error && (
-        <span className="text-red-500 text-[13px] -mt-3">
-          {getErrorMessage()}
-        </span>
-      )}
+      {error && <span className="text-red-500 text-[13px] -mt-3">{error}</span>}
     </>
   );
 }

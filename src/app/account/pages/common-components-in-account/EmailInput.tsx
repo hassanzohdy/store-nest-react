@@ -1,4 +1,3 @@
-import { trans } from "@mongez/localization";
 import {
   emailRule,
   FormControlProps,
@@ -11,18 +10,18 @@ export default function EmailInput(props: FormControlProps) {
     rules: [requiredRule, minLengthRule, emailRule],
     ...props,
   });
-  const getErrorMessage = () => {
-    if (!error) return null;
+  // const getErrorMessage = () => {
+  //   if (!error) return null;
 
-    switch (error) {
-      case "validation.required":
-        return trans("required");
-      case "validation.email":
-        return trans("invalidEmailAddress");
-      default:
-        return trans("required");
-    }
-  };
+  //   switch (error) {
+  //     case "validation.required":
+  //       return trans("required");
+  //     case "validation.email":
+  //       return trans("invalidEmailAddress");
+  //     default:
+  //       return trans("required");
+  //   }
+  // };
   return (
     <>
       <input
@@ -34,11 +33,7 @@ export default function EmailInput(props: FormControlProps) {
         }}
         {...otherProps}
       />
-      {error && (
-        <span className="text-red-500 text-[13px] -mt-3">
-          {getErrorMessage()}
-        </span>
-      )}
+      {error && <span className="text-red-500 text-[13px] -mt-3">{error}</span>}
     </>
   );
 }

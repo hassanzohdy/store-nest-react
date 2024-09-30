@@ -3,7 +3,7 @@ import { Form } from "@mongez/react-form";
 import Helmet from "@mongez/react-helmet";
 import { Link } from "@mongez/react-router";
 import { Button } from "design-system/components/ui/button";
-import { URLS } from "shared/utils";
+import { URLS } from "shared/utils/urls";
 import { useLogin } from "../../../hooks";
 import EmailInput from "../components/EmailInput";
 import PasswordInput from "../components/PasswordInput";

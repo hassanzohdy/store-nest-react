@@ -2,11 +2,9 @@ import { trans } from "@mongez/localization";
 import { Form } from "@mongez/react-form";
 import Helmet from "@mongez/react-helmet";
 import { Link, navigateTo } from "@mongez/react-router";
-import Footer from "layouts/BaseLayout/components/Footer/Footer";
-import Header from "layouts/BaseLayout/components/Header/Header";
 import { BookOpen } from "lucide-react";
-import { URLS } from "shared/utils";
 import endpoint from "shared/endpoint";
+import { URLS } from "shared/utils/urls";
 import CheckboxInput from "../common-components-in-account/CheckboxInput";
 import "../common-components-in-account/locales";
 import TextInput from "../common-components-in-account/TextInput";
@@ -32,7 +30,6 @@ export default function ForgetPasswordPage() {
         keywords={["online", "store", "forget", "متجر"]}
         description={trans("forgetDescriptionHelmet")}
       />
-      <Header />
       <div className="container my-20 w-full xl:w-2/6 lg:w-3/6	">
         <HeadOfForgetPassword />
         <Form onSubmit={handleSubmit} className="flex flex-col gap-2">
@@ -69,8 +66,6 @@ export default function ForgetPasswordPage() {
           </button>
         </Form>
       </div>
-
-      <Footer />
     </>
   );
 }
