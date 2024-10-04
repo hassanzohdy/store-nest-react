@@ -4,7 +4,7 @@ import type { Category, Product } from "app/shop/utils";
 export const URLS = {
   wishlist: "/wishlist",
   cart: "/cart",
-  pagesInfo: "/pages-info",
+  pagesInfo: "/pages-info", 
   catalog: "/catalog",
   home: "/",
   compare: "/compare",

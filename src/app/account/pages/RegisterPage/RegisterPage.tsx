@@ -4,7 +4,7 @@ import Helmet from "@mongez/react-helmet";
 import { Link, navigateBack } from "@mongez/react-router";
 import { BookOpen } from "lucide-react";
 import endpoint from "shared/endpoint";
-import { URLS } from "shared/utils";
+import { URLS } from "shared/utils/urls";
 import CheckboxInput from "../common-components-in-account/CheckboxInput";
 import EmailInput from "../common-components-in-account/EmailInput";
 import "../common-components-in-account/locales";
@@ -18,15 +18,8 @@ import SocialLogin from "./components/social-login/SocialLogin";
 
 export default function RegisterPage() {
   const submitForm = async ({ values }) => {
-    const user = {
-      firstName: values.userName,
-      lastName: values.userName,
-      email: values.email,
-      password: values.password,
-      confirmPassword: values.confirmPassword,
-    };
     try {
-      await endpoint.post("/register", user);
+      await endpoint.post("/register", values);
       navigateBack();
     } catch (error) {
       console.log(error);
@@ -40,11 +33,11 @@ export default function RegisterPage() {
         keywords={["online", "store", "متجر"]}
         description={trans("registerDescriptionHelmet")}
       />
-      <div className="container lg:w-5/6 xl:w-4/6 grid gap-7 grid-cols-4 my-20">
+      <div className="container lg:w-5/6 xl:w-11/12 grid gap-7 grid-cols-4 my-20">
         <div className="col-span-4 md:col-span-3 lg:col-span-2 ms-3 lg:ms-0">
           <HeadOfRegister />
           <Form onSubmit={submitForm} className="flex flex-col gap-2">
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-col	 md:flex-row	">
               <TextInput
                 type="text"
                 name="firstName"

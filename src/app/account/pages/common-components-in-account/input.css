@@ -1,5 +1,5 @@
 .Input {
-  @apply h-16 p-4 placeholder-[#7E7E7E] placeholder-opacity-100 outline-none border focus:border-[#BCE3C9] border-solid rounded-[10px] mb-2;
+  @apply h-[64px] p-4 placeholder-[#7E7E7E]  placeholder:font-medium outline-none border focus:border-[#BCE3C9] border-solid rounded-[10px] mb-2;
 }
 
 .check-label {

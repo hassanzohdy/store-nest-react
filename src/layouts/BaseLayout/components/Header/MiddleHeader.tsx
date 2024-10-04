@@ -3,7 +3,7 @@ import { Link } from "@mongez/react-router";
 import user from "app/account/user";
 import { useState } from "react";
 import { useLogo, useWindowScrollPosition } from "shared/hooks";
-import { URLS } from "shared/utils";
+import { URLS } from "shared/utils/urls";
 import { middleHeaderActions, navbarIcons } from "./constant/middleHeaderData";
 import SearchForm from "./forms/SearchForm";
 import AccountMenu from "./menu/AccountMenu";

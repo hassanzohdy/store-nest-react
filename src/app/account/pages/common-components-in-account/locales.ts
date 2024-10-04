@@ -22,8 +22,8 @@ groupedTranslations({
     ar: "إنشاء حساب",
   },
   alreadyHaveAccount: {
-    en: "Already have an account?",
-    ar: "هل لديك حساب بالفعل؟",
+    en: "Already have an account? ",
+    ar: " هل لديك حساب بالفعل؟",
   },
   login: {
     en: "Login",

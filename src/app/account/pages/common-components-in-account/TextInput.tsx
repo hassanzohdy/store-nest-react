@@ -1,4 +1,3 @@
-import { trans } from "@mongez/localization";
 import {
   FormControlProps,
   requiredRule,
@@ -9,16 +8,7 @@ export default function TextInput(props: FormControlProps) {
     rules: [requiredRule],
     ...props,
   });
-  const getErrorMessage = () => {
-    if (!error) return null;
 
-    switch (error) {
-      case "validation.required":
-        return trans("required");
-      default:
-        return trans("required");
-    }
-  };
   return (
     <div className="w-full">
       <input
@@ -30,9 +20,7 @@ export default function TextInput(props: FormControlProps) {
         }}
         {...otherProps}
       />
-      {error && (
-        <p className="text-red-500 text-[13px] -mt-2">{getErrorMessage()}</p>
-      )}
+      {error && <p className="text-red-500 text-[13px] -mt-2">{error}</p>}
     </div>
   );
 }

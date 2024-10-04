@@ -38,7 +38,7 @@ const LoginByFacebook = () => {
         callback={responseFacebook}
         textButton={trans("facebook")}
         cssClass="social bg-[#1877F2] text-white mb-5"
-        icon={<img src={logo} alt="notFound" />}
+        icon={<img src={logo} alt="notFound" className="me-4" />}
       />
     </div>
   );
